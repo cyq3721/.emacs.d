@@ -1,0 +1,67 @@
+#+title: 配置说明
+
+* init-packages
+** 概述
+配置软件源和软件包
+** 配置软件源
+#+begin_quote
+(when (>= emacs-major-version 24)
+  (require 'package)
+  (package-initialize)
+  (setq package-archives '(;;("gnu"   . "http://elpa.emacs-china.org/gnu/")
+			    ;;("melpa" . "http://elpa.emacs-china.org/melpa/")
+			    ("melpa" . "http://melpa.org/packages/")
+			    )))
+#+end_quote
+* init-use-package
+** 概述
+配置use-package宏
+* init-better-default
+** 概述
+改善emacs的使用体验
+** 用到软件包
+- which-key
+- good-scroll(改善上下滚动的流畅性）
+- marginalia(配置缓冲区的命令说明）
+- dashboard(配置启动页面）
+** 自定义函数
+*** open-my-init-file()
+**** 简介
+快速打开配置文件init.el
+**** 函数定义
+#+begin_quote
+(defun open-my-init-file()
+  (interactive)
+  (find-file "~/.emacs.d/init.el"))
+(global-set-key (kbd "<f2>") 'open-my-init-file)
+#+end_quote
+* init-find
+** 简介
+改善emacs的搜索
+** 用到软件包
+- ivy
+- counsel
+- amx
+- ace-window
+- mwim
+- avy
+* init-org
+** 概述
+改善org-mode使用体验
+* 绑定快捷键
+  - ("C-s" . 'swiper)
+  - ("C-x b" . 'ivy-switch-buffer)
+  - ("C-c v" . 'ivy-push-view)
+  - ("C-c s" . 'ivy-switch-view)
+  - ("C-c V" . 'ivy-pop-view)
+  - ("C-x C-@" . 'counsel-mark-ring)
+  - ("C-;" . avy-goto-char)
+  - ("C-'" . avy-goto-char-2)
+  - ("M-g f" . avy-goto-line)
+  - ("M-g w" . avy-gogo-word-1)
+  - ("M-g e" . avy-goto-word-0))
+  - (kbd "<f2>") 'open-my-init-file)
+  - (global-set-key (kbd "C-h C-f") 'find-function)
+  - (global-set-key (kbd "C-h C-v") 'find-variable)
+  - (global-set-key (kbd "C-h C-k") 'find-function-on-key)
+  - (define-key org-mode-map (kbd "C-c h") 'org-preview-html-mode)
