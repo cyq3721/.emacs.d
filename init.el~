@@ -1,0 +1,8 @@
+(add-to-list 'load-path "~/.emacs.d/lisp")
+(require 'init-packages.el)
+(require 'init-use-package)
+(require 'init-better-default)
+(require 'init-find)
+(require 'init-org)
+
+

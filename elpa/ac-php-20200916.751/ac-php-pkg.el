@@ -1,0 +1,2 @@
+;;; Generated package description from ac-php.el  -*- no-byte-compile: t -*-
+(define-package "ac-php" "20200916.751" "Auto Completion source for PHP." '((ac-php-core "2.0") (auto-complete "1.4.0") (yasnippet "0.8.0")) :commit "7c023b9ced156cee03171e16c3dac6d26923042f" :authors '(("jim" . "xcwenn@qq.com")) :maintainer '("jim") :keywords '("completion" "convenience" "intellisense") :url "https://github.com/xcwen/ac-php")

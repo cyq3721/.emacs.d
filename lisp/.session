@@ -1,0 +1,51 @@
+;;; Automatically generated on Sun Jul 16 08:11:16 2023
+;;; Invoked by cyq@tianshanpiaoxuedeMacBook-Pro.local using 28.2
+(setq-default kill-ring '(#(";;; Code:" 0 4 (fontified t face font-lock-comment-delimiter-face) 4 8 (fontified t face font-lock-comment-face) 8 9 (rear-nonsticky t fontified t face font-lock-comment-face)) #("(require 'dired-x)" 0 1 (fontified t) 1 8 (fontified t face font-lock-keyword-face) 8 10 (fontified t) 10 17 (fontified t face font-lock-constant-face) 17 18 (fontified t)) #("(require 'hungry-delete )    ;;hungry-delete 一次性删除相同字符" 0 1 (fontified t) 1 8 (fontified t face font-lock-keyword-face) 8 10 (fontified t) 10 23 (fontified t face font-lock-constant-face) 23 29 (fontified t) 29 31 (fontified t face font-lock-comment-delimiter-face) 31 54 (fontified t face font-lock-comment-face)) ";;; Code:" ";;; init-better-default.el ends here" ";;; Commentary:" ";;; package --- Summary" "(defun my-web-mode-hook ()
+  \"Hook for `web-mode'.\"
+    (set (make-local-variable 'company-backends)
+         '(company-tern company-web-html company-yasnippet company-files)))
+
+(add-hook 'web-mode-hook 'my-web-mode-hook)
+
+;; Enable JavaScript completion between <script>...</script> etc.
+(advice-add 'company-tern :before
+            #'(lambda (&rest _)
+                (if (equal major-mode 'web-mode)
+                    (let ((web-mode-cur-language
+                          (web-mode-language-at-pos)))
+                      (if (or (string= web-mode-cur-language \"javascript\")
+                              (string= web-mode-cur-language \"jsx\"))
+                          (unless tern-mode (tern-mode))
+                        (if tern-mode (tern-mode -1)))))))
+
+;; manual autocomplete
+(define-key web-mode-map (kbd \"M-SPC\") 'company-complete)"))
+(setq-default session-file-alist '(("/Users/cyq/Documents/GitHub/.emacs.d/lisp/init-better-default.el" 3150 41 1 nil nil 1292 (overwrite-mode)) ("/Users/cyq/Documents/GitHub/MySite/htmltest/html02.html" 127 111 1 nil nil 127 (overwrite-mode)) ("/Users/cyq/Documents/GitHub/.emacs.d/lisp/init-company-web.el" 2950 2101 1 nil nil 2950 (overwrite-mode)) ("/Users/cyq/Documents/GitHub/.emacs.d/lisp/init-php.el" 384 191 1 nil nil 384 (overwrite-mode)) ("/Users/cyq/Documents/GitHub/.emacs.d/init.el" 352 405 1 nil nil 352 (overwrite-mode)) ("/Users/cyq/Documents/GitHub/MySite/htmltest/html01.html" 947 947 1 nil nil 927 (overwrite-mode)) ("/Users/cyq/Documents/GitHub/.emacs.d/lisp/init-ivy.el" 694 40 1 nil nil 694 (overwrite-mode)) ("/Users/cyq/.emacs.d/init.el" 1 nil 1 nil nil 2353 (overwrite-mode))))
+(setq-default file-name-history '(#("/Users/cyq/Documents/GitHub/.emacs.d/lisp/" 0 42 (ivy-index 5)) "/Users/cyq/Documents/GitHub/.emacs.d/init.el" #("/Users/cyq/Documents/GitHub/.emacs.d/" 0 37 (ivy-index 2)) #("/Users/cyq/Documents/GitHub/emacs配置文件/.emacs.d/init" 0 51 (ivy-index 0)) #("/Users/cyq/Documents/GitHub/emacs配置文件/.emacs.d/init." 0 52 (ivy-index 0)) "/Users/cyq/Documents/GitHub/emacs配置文件/.emacs.d/init.el" "/Users/cyq/Documents/GitHub/.emacs.d/lisp/init-better-default.el" #("/Users/cyq/Documents/GitHub/.emacs.d/lisp/init-web.el" 0 53 (ivy-index 22)) "/Users/cyq/Documents/GitHub/.emacs.d/lisp/init-company-web.el" "/Users/cyq/Documents/GitHub/MySite/htmltest/html02.html" #("/Users/cyq/Documents/GitHub/MySite/htmltest/html02.html" 0 55 (ivy-index 0)) "/Users/cyq/Documents/GitHub/MySite/htmltest/html01.html" #("/Users/cyq/Documents/GitHub/.emacs.d/lisp/init-company-web.el" 0 61 (ivy-index 4)) "/Users/cyq/Documents/GitHub/.emacs.d/lisp/init-php.el" "/Users/cyq/Documents/GitHub/.emacs.d/lisp/init-packages.el" "/Users/cyq/Documents/GitHub/.emacs.d/lisp/init-embark.el" "/Users/cyq/Documents/GitHub/.emacs.d/lisp/init-ivy.el" #("/Users/cyq/Documents/GitHub/.emacs.d/lisp/init-php.el" 0 53 (ivy-index 18)) #("/Users/cyq/Documents/GitHub/.emacs.d/lisp/init-ivy.el" 0 53 (ivy-index 10)) #("/Users/cyq/Documents/GitHub/.emacs.d/lisp/init-mmm-mode.el" 0 58 (ivy-index 11)) #("/Users/cyq/Documents/GitHub/.emacs.d/lisp/init-mmm.el" 0 53 (ivy-index 12)) #("/Users/cyq/Documents/GitHub/.emacs.d/lisp/init-embark.el" 0 56 (ivy-index 7)) #("/Users/cyq/Documents/GitHub/.emacs.d/init.el" 0 44 (ivy-index 0)) #("/Users/cyq/Documents/GitHub/MySite/htmltest/" 0 44 (ivy-index 3)) #("/Users/cyq/Documents/GitHub/.emacs.d/lisp/init-packages.el" 0 58 (ivy-index 0)) "/Users/cyq/Documents/GitHub/My_Note/note/兄弟连php教程笔记.org" "/Users/cyq/.emacs.d/init.el" "/Users/cyq/Documents/GitHub/My_Note/My_Notebook.org" #("/Users/cyq/Documents/GitHub/My_Note/" 0 36 (ivy-index 4)) "/private/etc/apache2/httpd.conf"))
+(setq-default amx-history '(web-mode ivy-resume eval-buffer cd 5x5 amx arp))
+(setq-default command-history '((avy-goto-char 65306 nil) (web-mode-snippet-insert "html5")))
+(setq-default counsel-git-grep-cmd-history '("git --no-pager grep -n --no-color -I -e \"%s\""))
+(setq-default ivy-history '(#("html5" 0 5 (ivy-index 0))))
+(setq-default occur-collect-regexp-history '("\\1"))
+(setq-default table-capture-columns-history '(""))
+(setq-default table-capture-justify-history '("left"))
+(setq-default table-capture-min-cell-width-history '("5"))
+(setq-default table-cell-height-history '("1"))
+(setq-default table-cell-span-direction-history '("right"))
+(setq-default table-cell-split-contents-to-history '("split"))
+(setq-default table-cell-split-orientation-history '("horizontally"))
+(setq-default table-cell-width-history '("5"))
+(setq-default table-col-delim-regexp-history '(""))
+(setq-default table-columns-history '("3"))
+(setq-default table-insert-row-column-history '("row"))
+(setq-default table-justify-history '("center"))
+(setq-default table-row-delim-regexp-history '(""))
+(setq-default table-rows-history '("3"))
+(setq-default table-sequence-count-history '("0"))
+(setq-default table-sequence-increment-history '("1"))
+(setq-default table-sequence-interval-history '("1"))
+(setq-default table-sequence-justify-history '("left"))
+(setq-default table-sequence-string-history '("0"))
+(setq-default table-source-caption-history '("Table"))
+(setq-default table-source-language-history '("html"))
+(setq-default table-target-history '("cell"))
