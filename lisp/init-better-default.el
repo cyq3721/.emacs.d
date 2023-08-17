@@ -97,7 +97,7 @@
 ;;快速打开配置文件
 (defun open-my-init-file()
   (interactive)
-  (find-file "~/emacs配置文件/.emacs.d/init.el"))
+  (find-file "~/.emacs.d/init.el"))
 (global-set-key (kbd "<f2>") 'open-my-init-file)
 
 ;;--------------------
