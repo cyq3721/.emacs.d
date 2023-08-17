@@ -10,11 +10,12 @@
 ;;加载image+
 (eval-after-load 'image '(require 'image+))
 
-
+(add-to-list 'default-frame-alist '(width . 90))  ; （可选）设定启动图形界面时的初始 Frame 宽度（字符数）
+(add-to-list 'default-frame-alist '(height . 55)) ; （可选）设定启动图形界面时的初始 Frame 高度（字符数）
 ;;(tool-bar-mode -1)                     ;;关闭工具栏
 (which-key-mode t)                    ;;打开which-key-mode
 ;;(scroll-bar-mode -1)                  ;;关闭滚动条
-
+(setq confirm-kill-emacs #'yes-or-no-p)      ; 在关闭 Emacs 前询问是否确认关闭，防止误触
 (setq track-eol t)  ;; 当光标在行尾上下移动的时候，始终保持在行尾。
 ;;(setq linum-format "%4d \u2502 ")  ;; format line number spacing
 ;;--------------------
@@ -24,16 +25,18 @@
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
 (put 'LaTeX-hide-environment 'disabled nil)
-;;--------------------
+;;-------------------- 
 ;;让 dired 可以递归的拷贝和删除目录
 (setq dired-recursive-copies 'top)
 (setq dired-recursive-deletes 'top)
 
-
+(savehist-mode 1)                            ; （可选）打开 Buffer 历史记录保存
 (global-hl-line-mode t)             ;;高亮当前行
 (global-font-lock-mode t)        ;;进行语法加亮
 (delete-selection-mode 1)           ;;删除和替换选中部分
 ;;(global-linum-mode t)                ;;全局开启行号
+(column-number-mode t)   ; 在 Mode line 上显示列号
+(global-display-line-numbers-mode 1)         ; 在 Window 显示行号
 (electric-indent-mode t)             ;;回车自动缩进
 (delete-selection-mode t)            ;;开启选中替换，选中删除
 (global-hungry-delete-mode t)
@@ -56,8 +59,8 @@
 (auto-image-file-mode t)  ;;让 Emacs 可以直接打开和显示图片。
 
 
-
-
+(add-hook 'prog-mode-hook #'hs-minor-mode)   ; 编程模式下，可以折叠代码块
+(add-hook 'prog-mode-hook #'show-paren-mode) ; 编程模式下，光标在括号上时高亮另一个括号
 ;(add-hook 'emacs-lisp-mode-hook 'show-paren-mode)    ;;开启括号补齐
 ;;(show-paren-mode t)
 ;;(setq show-paren-style 'parentheses)    ;;括号匹配时显示另外一边的括号，而不是烦人的跳到另一个括号
