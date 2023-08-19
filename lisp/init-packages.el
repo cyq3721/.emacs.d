@@ -74,7 +74,7 @@
 		
 		;;=======python环境=================
 		ipython-shell-send
-                exec-path-from-shell
+              ;; exec-path-from-shell
                 pyenv-mode
 		elpy  
 		python-mode
