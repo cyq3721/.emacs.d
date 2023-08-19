@@ -25,7 +25,7 @@
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
 (put 'LaTeX-hide-environment 'disabled nil)
-;;-------------------- 
+;;--------------------
 ;;让 dired 可以递归的拷贝和删除目录
 (setq dired-recursive-copies 'top)
 (setq dired-recursive-deletes 'top)
@@ -72,10 +72,10 @@
 ;;(setq default-tab-width 8)
 ;;(setq tab-stop-list ())
 ;;(loop for x downfrom 40 to 1 do
-  ;;    (setq tab-stop-list (cons (* x 4) tab-stop-list)))  
+  ;;    (setq tab-stop-list (cons (* x 4) tab-stop-list)))
 ;;--------------------
 
-;;(setq-default auto-fill-function 'do-auto-fill)  ;;Autofill in all modes;;
+(setq-default auto-fill-function 'do-auto-fill)  ;;Autofill in all modes;;
 ;;(setq default-fill-column 60)    ;;把 fill-column 设为 60. 这样的文字更好读
 ;;--------------------
 
@@ -89,7 +89,7 @@
 
 ;;防止页面滚动时跳动， scroll-margin 3 可以在靠近屏幕边沿3行时就开始滚动，可以很好的看到上下文
 (setq scroll-margin 3
-      scroll-conservatively 10000) 
+      scroll-conservatively 10000)
 
 ;打开最近文件，设置快捷键 c-x c-r
 (require 'recentf)
@@ -133,7 +133,7 @@
   )
 
 (setq hippie-expand-try-function-list '(try-expand-debbrev
-                                        try-expand-debbrev-all-buffers  
+                                        try-expand-debbrev-all-buffers
                                         try-expand-debbrev-from-kill
                                         try-complete-file-name-partially
                                         try-complete-file-name
@@ -167,7 +167,6 @@
 
 (setq dired-dwim-target t)     ;;开启两个窗口复制文件时，自动复制到另一个窗口
 
-
 ;;去除dos换行符
 (defun hidden-dos-eol ()
   (interactive)
@@ -193,6 +192,35 @@
 (require 'browse-kill-ring)
 (global-set-key [(control c)(k)] 'browse-kill-ring)
 (browse-kill-ring-default-keybindings)
+
+
+(use-package mwim
+  :ensure t
+  :bind
+  ("C-a" . mwim-beginning-of-code-or-line)
+  ("C-e" . mwim-end-of-code-or-line))
+
+(use-package undo-tree
+  :ensure t
+  :init (global-undo-tree-mode)
+  :custom
+  (undo-tree-auto-save-history nil))
+
+(use-package good-scroll
+  :ensure t
+  :if window-system          ; 在图形化界面时才使用这个插件
+  :init (good-scroll-mode))
+
+(use-package dashboard
+  :ensure t
+  :config
+  (setq dashboard-banner-logo-title "Welcome to Emacs!") ;; 个性签名，随读者喜好设置
+  ;; (setq dashboard-projects-backend 'projectile) ;; 读者可以暂时注释掉这一行，等安装了 projectile 后再使用
+  (setq dashboard-startup-banner 'official) ;; 也可以自定义图片
+  (setq dashboard-items '((recents  . 10)   ;; 显示多少个最近文件
+			  (bookmarks . 5)  ;; 显示多少个最近书签
+			  (projects . 5))) ;; 显示多少个最近项目
+  (dashboard-setup-startup-hook))
 
 (provide 'init-better-default)
 ;;; init-better-default.el ends here

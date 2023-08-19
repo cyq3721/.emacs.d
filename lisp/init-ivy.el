@@ -1,8 +1,9 @@
 ;;; package --- summary
 ;;; commentary:
 ;;; code:
-(ivy-mode)
-(setq ivy-use-virtual-buffers t)
+(ivy-mode t)
+(counsel-mode t)
+;;(setq ivy-use-virtual-buffers t)
 (setq enable-recursive-minibuffers t)
 ;; enable this if you want `swiper' to use it
 ;; (setq search-default-mode #'char-fold-to-regexp)
@@ -15,6 +16,15 @@
 (global-set-key (kbd "<f1> v") 'counsel-describe-variable)
 (global-set-key (kbd "<f1> o") 'counsel-describe-symbol)
 (global-set-key (kbd "<f1> l") 'counsel-find-library)
-
+(global-set-key (kbd "C-x C-@") 'counsel-mark-ring)
+(global-set-key (kbd "C-x C-SPC") 'counsel-mark-ring)
 (provide 'init-ivy)
+
+(use-package amx
+  :ensure t
+  :init (amx-mode 1))
+
+(use-package ace-window
+  :ensure t
+  :bind (("C-x o" . 'ace-window)))
 ;;; init-ivy.el ends here

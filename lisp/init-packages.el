@@ -39,12 +39,18 @@
                        tramp
                        image+
 		       ;; --- Better Editor ---
+		       good-scroll
+		       dashboard
 		       better-defaults
 		       popwin
                        mmm-mode
 		hungry-delete
 		swiper
 		counsel
+		amx
+		ace-window
+		mwim
+		undo-tree
 		smartparens
 		neotree
 		better-defaults
