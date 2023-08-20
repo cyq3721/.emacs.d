@@ -15,7 +15,7 @@
 ;;(tool-bar-mode -1)                     ;;关闭工具栏
 (which-key-mode t)                    ;;打开which-key-mode
 ;;(scroll-bar-mode -1)                  ;;关闭滚动条
-(setq confirm-kill-emacs #'yes-or-no-p)      ; 在关闭 Emacs 前询问是否确认关闭，防止误触
+;;(setq confirm-kill-emacs #'yes-or-no-p)      ; 在关闭 Emacs 前询问是否确认关闭，防止误触
 (setq track-eol t)  ;; 当光标在行尾上下移动的时候，始终保持在行尾。
 ;;(setq linum-format "%4d \u2502 ")  ;; format line number spacing
 ;;--------------------
@@ -25,7 +25,7 @@
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
 (put 'LaTeX-hide-environment 'disabled nil)
-;;-------------------- 
+;;--------------------
 ;;让 dired 可以递归的拷贝和删除目录
 (setq dired-recursive-copies 'top)
 (setq dired-recursive-deletes 'top)
@@ -72,7 +72,7 @@
 ;;(setq default-tab-width 8)
 ;;(setq tab-stop-list ())
 ;;(loop for x downfrom 40 to 1 do
-  ;;    (setq tab-stop-list (cons (* x 4) tab-stop-list)))  
+;;    (setq tab-stop-list (cons (* x 4) tab-stop-list)))
 ;;--------------------
 
 ;;(setq-default auto-fill-function 'do-auto-fill)  ;;Autofill in all modes;;
