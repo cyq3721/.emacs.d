@@ -39,12 +39,18 @@
                        tramp
                        image+
 		       ;; --- Better Editor ---
+		       good-scroll
+		       dashboard
 		       better-defaults
 		       popwin
                        mmm-mode
 		hungry-delete
 		swiper
 		counsel
+		amx
+		ace-window
+		mwim
+		undo-tree
 		smartparens
 		neotree
 		better-defaults
@@ -68,7 +74,7 @@
 		
 		;;=======python环境=================
 		ipython-shell-send
-                exec-path-from-shell
+              ;; exec-path-from-shell
                 pyenv-mode
 		elpy  
 		python-mode
