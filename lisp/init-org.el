@@ -4,13 +4,13 @@
 
 (require 'org)
 (setq org-src-fontify-natively t)      ;;org-mode引用代码时实现语法高亮
-(add-hook 'org-mode-hook   
+(add-hook 'org-mode-hook
 	  (lambda () (setq truncate-lines nil)))  ;;自动换行
 (setq org-agenda-files '("/org"))
 (global-set-key (kbd "C-c a") 'org-agenda)
 (setq org-startup-indented t)  ;;开启自动缩进
 
-(setq org-hide-leading-stars t)
+
 
 ;; 导出 md 格式
 (with-eval-after-load 'org
@@ -18,7 +18,6 @@
 
 ;;-------不关闭中文输入法输入*和-------
 (defun org-mode-my-init ()
-  ; ......
   (define-key org-mode-map (kbd "×") (kbd "*"))
   (define-key org-mode-map (kbd "－") (kbd "-"))
   )
@@ -37,7 +36,7 @@
 (add-hook 'org-mode-hook #'org-bullets-mode)
 (setq org-bullets-bullet-list '( "◉" "○" "✸" "✿" "☯" "✜"))
 ;;♥ ● ◇ ✚ ✜ ☯ ◆ ♠ ♣ ♦ ☢ ❀ ◆ ◖ ▶
-
+(setq org-hide-leading-stars t)
 ;;导出站点
 (require 'ox-publish)
 (setq org-publish-project-alist

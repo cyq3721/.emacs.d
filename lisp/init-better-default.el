@@ -35,11 +35,11 @@
 (global-font-lock-mode t)        ;;进行语法加亮
 (delete-selection-mode 1)           ;;删除和替换选中部分
 ;;(global-linum-mode t)                ;;全局开启行号
-(column-number-mode t)   ; 在 Mode line 上显示列号
+;(column-number-mode t)   ; 在 Mode line 上显示列号
 (global-display-line-numbers-mode 1)         ; 在 Window 显示行号
 (electric-indent-mode t)             ;;回车自动缩进
 (delete-selection-mode t)            ;;开启选中替换，选中删除
-(global-hungry-delete-mode t)
+;(global-hungry-delete-mode t)
 (global-auto-revert-mode t)      ;;自动加载外部修改过的文件
 ;;(smex t)
 
@@ -84,12 +84,12 @@
 (setq sentence-end-double-space nil)
 ;;--------------------
 
-;;(setq enable-recursive-minibuffers t)   ;;可以递归的使用 minibuffer
+(setq enable-recursive-minibuffers t)   ;;可以递归的使用 minibuffer
 
 
 ;;防止页面滚动时跳动， scroll-margin 3 可以在靠近屏幕边沿3行时就开始滚动，可以很好的看到上下文
 (setq scroll-margin 3
-      scroll-conservatively 10000) 
+      scroll-conservatively 10000)
 
 ;打开最近文件，设置快捷键 c-x c-r
 (require 'recentf)
@@ -102,6 +102,7 @@
   (interactive)
   (find-file "~/.emacs.d/init.el"))
 (global-set-key (kbd "<f2>") 'open-my-init-file)
+(global-set-key (kbd "<f9>") 'neotree-show)
 
 ;;--------------------
 (global-set-key (kbd "C-h C-f") 'find-function)

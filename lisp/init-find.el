@@ -9,11 +9,13 @@
   (counsel-mode 1)
   :config
   (setq ivy-use-virtual-buffers t)
+  (setq enable-recursive-minibuffers t)
   (setq search-default-mode #'char-fold-to-regexp)
   (setq ivy-count-format "(%d/%d) ")
   :bind
   (("C-s" . 'swiper)
    ("C-x b" . 'ivy-switch-buffer)
+   ("C-c C-f" . 'counsel-find-file)
    ("C-c v" . 'ivy-push-view)
    ("C-c s" . 'ivy-switch-view)
    ("C-c V" . 'ivy-pop-view)
