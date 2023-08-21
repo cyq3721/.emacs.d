@@ -1,4 +1,7 @@
- (use-package marginalia
+;;; package --- init-embark
+;;; commentary:
+;;; code:
+(use-package marginalia
   :ensure t
   :config
   (marginalia-mode))
@@ -35,3 +38,4 @@
   (embark-collect-mode . consult-preview-at-point-mode))
 
 (provide 'init-embark)
+;;; init-embark.el ends here

@@ -2,6 +2,7 @@
 ;;; commentary:
 ;;; code:
 (require 'company)                                   ; load company mode
+(require 'web-mode)
 (require 'company-web-html)                          ; load company mode html backend
 ;; and/or
 (require 'company-web-jade)                          ; load company mode jade backend
