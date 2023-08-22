@@ -7,7 +7,6 @@
 
 (require 'init-packages)
 (require 'init-use-package)
-(require 'init-better-default)
 (require 'init-find)
 (require 'init-ivy)
 (require 'init-company)
@@ -17,6 +16,8 @@
 (require 'init-php)
 (require 'init-embark)
 (require 'init-smartparens)
+(require 'init-org)
+(require 'init-better-default)
 ;(require 'init-translate)
 
 

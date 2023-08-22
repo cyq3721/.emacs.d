@@ -25,13 +25,13 @@
                        company-jedi
 		       company-web
                        company-php
-                      
+                       emmet-mode
                        ;lsp-mode
                        ;lsp-treemacs
                        ;dap-mode
                        
                        ac-php
-                       flymake-php 
+                       flymake-php
                        php-mode
 		       web-completion-data
 		       which-key

@@ -4,6 +4,10 @@
 (require 'popwin)
 (require 'hungry-delete )    ;;hungry-delete 一次性删除相同字符
 (require 'dired-x)
+(require 'which-key)
+
+
+(which-key-mode)
 
 (popwin-mode 1)                        ;;将光标自动移动到新打开的窗口
 
@@ -13,7 +17,7 @@
 (add-to-list 'default-frame-alist '(width . 90))  ; （可选）设定启动图形界面时的初始 Frame 宽度（字符数）
 (add-to-list 'default-frame-alist '(height . 55)) ; （可选）设定启动图形界面时的初始 Frame 高度（字符数）
 ;;(tool-bar-mode -1)                     ;;关闭工具栏
-(which-key-mode t)                    ;;打开which-key-mode
+
 ;;(scroll-bar-mode -1)                  ;;关闭滚动条
 ;;(setq confirm-kill-emacs #'yes-or-no-p)      ; 在关闭 Emacs 前询问是否确认关闭，防止误触
 (setq track-eol t)  ;; 当光标在行尾上下移动的时候，始终保持在行尾。
@@ -30,6 +34,8 @@
 (setq dired-recursive-copies 'top)
 (setq dired-recursive-deletes 'top)
 
+
+;;(global-visual-line-mode t) ;;自动换行
 (savehist-mode 1)                            ; （可选）打开 Buffer 历史记录保存
 (global-hl-line-mode t)             ;;高亮当前行
 (global-font-lock-mode t)        ;;进行语法加亮

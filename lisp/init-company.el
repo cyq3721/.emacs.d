@@ -2,12 +2,16 @@
 ;;; Commentary:
 ;;; code:
 (require 'company)
+(require 'emmet-mode)
 ;;(require 'flycheck )
 ;;(global-flycheck-mode t)
 (require 'yasnippet)
-(company-quickhelp-mode)
+;(company-quickhelp-mode)
 
 (add-hook 'after-init-hook 'global-company-mode)
+(add-hook 'sgml-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
+(add-hook 'html-mode-hook 'emmet-mode)
+(add-hook 'css-mode-hook  'emmet-mode)
 
 (eval-after-load 'company
    '(define-key company-active-map (kbd "C-c h") 'company-quickhelp-manual-begin))

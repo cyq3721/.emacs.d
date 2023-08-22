@@ -2687,7 +2687,8 @@ another auto-completion with different ac-sources (e.g. ac-php)")
     ;;C-c C-d : dom
     ;;C-c C-e : element
     (define-key map (kbd "C-c C-f")   'web-mode-fold-or-unfold)
-    (define-key map (kbd "C-c C-h")   'web-mode-buffer-fontify)
+    ; (define-key map (kbd "C-c C-h")   nil)
+   ; (define-key map (kbd "C-c C-h")   'web-mode-buffer-fontify)
     (define-key map (kbd "C-c C-i")   'web-mode-buffer-indent)
     (define-key map (kbd "C-c C-j")   'web-mode-jshint)
     (define-key map (kbd "C-c C-l")   'web-mode-file-link)

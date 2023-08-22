@@ -1,13 +1,13 @@
 
 ;; ----- amx-history -----
 (
+ web-mode
+ byte-compile-file
+ customize
  eval-buffer
  lisp-mode
  neotree
  speedbar
- eww
- customize
- web-mode
 )
 
 ;; ----- amx-data -----
@@ -17,11 +17,12 @@
  (org-preview-html-mode . 3)
  (org-present . 2)
  (org-pandoc-export-as-ms . 1)
- (web-mode . 1)
- (customize . 1)
+ (web-mode . 4)
+ (customize . 2)
  (eww . 1)
  (speedbar-mode . 1)
  (speedbar . 1)
  (neotree . 1)
  (lisp-mode . 1)
+ (byte-compile-file . 2)
 )

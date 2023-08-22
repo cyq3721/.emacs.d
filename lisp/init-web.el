@@ -3,6 +3,7 @@
 ;;; code:
 
 (require 'web-mode)
+(require 'emmet-mode)
 
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
@@ -33,13 +34,25 @@
   '(("json" . "/some/path/.*\\.api\\'")
     ("xml"  . "/other/path/.*\\.api\\'")
     ("jsx"  . "/some/react/path/.*\\.js[x]?\\'")))
-
-(defun my-web-mode-hook ()
+;;--------------------------------------------------
+(defun my-web-mode-hook ()      ;;建立函数（在web-mode下运行的函数）
   "Hooks for Web mode."
   (setq web-mode-markup-indent-offset 2)
+  (set (make-local-variable 'company-backends) '(company-css company-web-html company-yasnippet company-files))
 )
 (add-hook 'web-mode-hook  'my-web-mode-hook)
-
+(add-hook 'web-mode-hook  'emmet-mode)
+(add-hook 'web-mode-before-auto-complete-hooks
+    '(lambda ()
+     (let ((web-mode-cur-language
+  	    (web-mode-language-at-pos)))
+               (if (string= web-mode-cur-language "php")
+    	   (yas-activate-extra-mode 'php-mode)
+      	 (yas-deactivate-extra-mode 'php-mode))
+               (if (string= web-mode-cur-language "css")
+    	   (setq emmet-use-css-transform t)
+      	 (setq emmet-use-css-transform nil)))))
+;;--------------------------------------------------
 (setq web-mode-css-indent-offset 2)
 (setq web-mode-markup-indent-offset 2)
 (setq web-mode-code-indent-offset 2)
