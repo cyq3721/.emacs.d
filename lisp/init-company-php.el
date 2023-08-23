@@ -1,6 +1,9 @@
+;;; init-company-php  --- php补全
+;;; commentary:
+;;; code:
 (require 'php-mode)
-
-(add-hook 'php-mode-hook
+(require 'web-mode)
+(add-hook 'web-mode-hook
           '(lambda ()
              ;; Enable company-mode
              (company-mode t)
@@ -31,3 +34,4 @@
 (add-hook 'web-mode-hook '(company-mode t))
 
 (provide 'init-company-php)
+;;; init-company-php.el ends here
