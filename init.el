@@ -13,7 +13,7 @@
 (require 'init-company-web)
 (require 'init-company-php)
 (require 'init-mmm-mode)
-(require 'init-php)
+;(require 'init-php)
 (require 'init-embark)
 (require 'init-smartparens)
 (require 'init-org)
