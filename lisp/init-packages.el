@@ -93,12 +93,15 @@
 		monokai-theme
 		solarized-theme
 		melancholy-theme
+		;Timu-spacegrey-theme
+		sublime-themes
+		doom-themes
 		spacemacs-theme
-                                   gruvbox-theme
+                gruvbox-theme
 		zenburn-theme
                 color-theme-sanityinc-tomorrow
 		color-theme-sanityinc-solarized
-                       material-theme
+                material-theme
 		) "Default packages")
 
  (setq package-selected-packages my/packages)

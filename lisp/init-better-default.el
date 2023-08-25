@@ -201,5 +201,9 @@
 (global-set-key [(control c)(k)] 'browse-kill-ring)
 (browse-kill-ring-default-keybindings)
 
+(require 'org)
+(setq org-hide-leading-stars t)
+
 (provide 'init-better-default)
+
 ;;; init-better-default.el ends here

@@ -1,9 +1,9 @@
 
 ;; ----- amx-history -----
 (
+ customize
  web-mode
  byte-compile-file
- customize
  eval-buffer
  lisp-mode
  neotree
@@ -18,7 +18,7 @@
  (org-present . 2)
  (org-pandoc-export-as-ms . 1)
  (web-mode . 4)
- (customize . 2)
+ (customize . 3)
  (eww . 1)
  (speedbar-mode . 1)
  (speedbar . 1)
