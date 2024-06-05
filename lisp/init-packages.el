@@ -44,6 +44,7 @@
 		       better-defaults
 		       popwin
                        mmm-mode
+		       ox-pandoc
 		hungry-delete
 		swiper
 		counsel
@@ -68,7 +69,8 @@
 		htmlize
 		yasnippet
 		markdown-mode
-		;;pyenv-mode
+		company-tabnine
+		;;Pyenv-mode
 		highlight-indentation
 		all-the-icons
 		

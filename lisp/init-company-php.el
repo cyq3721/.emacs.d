@@ -9,7 +9,7 @@
              (company-mode t)
              
              (require 'company-php)
-              (require 'ac-php)
+             (require 'ac-php)
              (setq ac-sources '(ac-source-php))
 
              ;; As an example (optional)

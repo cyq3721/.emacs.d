@@ -3,15 +3,19 @@
 ;;; code:
 (require 'company)
 (require 'emmet-mode)
+(require 'web-mode)
 ;;(require 'flycheck )
 ;;(global-flycheck-mode t)
 (require 'yasnippet)
-;(company-quickhelp-mode)
+;;(company-quickhelp-mode)
+(require 'company-tabnine)
 
+(add-to-list 'company-backends #'company-tabnine)
 (add-hook 'after-init-hook 'global-company-mode)
 (add-hook 'sgml-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
 (add-hook 'html-mode-hook 'emmet-mode)
 (add-hook 'css-mode-hook  'emmet-mode)
+(add-hook 'web-mode-hook 'web-mode)
 
 (eval-after-load 'company
    '(define-key company-active-map (kbd "C-c h") 'company-quickhelp-manual-begin))

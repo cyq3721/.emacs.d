@@ -1,13 +1,13 @@
 
 ;; ----- amx-history -----
 (
- customize
+ emmet-mode
  web-mode
- byte-compile-file
- eval-buffer
- lisp-mode
- neotree
- speedbar
+ customize-group
+ imenu-add-menubar-index
+ imenu
+ eshell
+ org-pandoc-export-to-docx
 )
 
 ;; ----- amx-data -----
@@ -16,13 +16,25 @@
  (ivy-resume . 1)
  (org-preview-html-mode . 3)
  (org-present . 2)
- (org-pandoc-export-as-ms . 1)
- (web-mode . 4)
+ (org-pandoc-export-as-ms . 3)
+ (web-mode . 36)
  (customize . 3)
  (eww . 1)
  (speedbar-mode . 1)
  (speedbar . 1)
- (neotree . 1)
+ (neotree . 2)
  (lisp-mode . 1)
  (byte-compile-file . 2)
+ (php-mode . 2)
+ (image-mode . 1)
+ (global-set-key . 1)
+ (replace-string . 2)
+ (org-display-inline-images . 1)
+ (org-pandoc-export-to-docx . 1)
+ (eshell . 1)
+ (imenu . 1)
+ (imenu-add-menubar-index . 3)
+ (company-tabnine-install-binary . 2)
+ (customize-group . 1)
+ (emmet-mode . 3)
 )
