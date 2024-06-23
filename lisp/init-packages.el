@@ -70,6 +70,7 @@
 		yasnippet
 		markdown-mode
 		company-tabnine
+	;;	dirvish
 		;;Pyenv-mode
 		highlight-indentation
 		all-the-icons
