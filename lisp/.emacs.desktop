@@ -1,0 +1,46 @@
+;; -*- mode: emacs-lisp; lexical-binding:t; coding: utf-8-emacs; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Tue Jul 16 20:10:42 2024
+;; Desktop file format version 208
+;; Emacs version 29.4
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (26262 25410 964479 603000) (desktop . "208") "cyq@archlinux" nil nil ((((minibuffer . t) (undecorated) (override-redirect) (font . "-WQYF-文泉驿等宽微米黑-regular-normal-normal-*-15-*-*-*-*-0-iso10646-1") (border-width . 0) (internal-border-width . 0) (child-frame-border-width) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars . right) (horizontal-scroll-bars) (foreground-color . "black") (background-color . "white") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-special-glyphs) (scroll-bar-foreground) (scroll-bar-background) (menu-bar-lines . 1) (tab-bar-lines . 0) (tool-bar-lines . 0) (title) (wait-for-wm . t) (tool-bar-position . top) (inhibit-double-buffering) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 16) (scroll-bar-height . 16) (alpha) (alpha-background) (no-focus-on-map) (no-accept-focus) (fullscreen) (visibility . t) (use-frame-synchronization) (skip-taskbar) (z-group) (display-type . color) (background-mode . light) (cursor-color . "black") (font-parameter) (sticky) (shaded) (environment) (dnd-root-window-position) (last-focus-update . t) (frameset--id . "FCF1-6277-4D19-1151") (frameset--mini t . t) (frameset--text-pixel-width . 720) (frameset--text-pixel-height . 684) (height . 36) (width . 80) (modeline . t) (unsplittable) (left . 935) (top . 179) (icon-name) (display . ":0") (explicit-name)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 6) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 76) (min-pixel-width . 90) (min-pixel-height-ignore . 38) (min-pixel-width-ignore . 50) (min-pixel-height-safe . 19) (min-pixel-width-safe . 18)) leaf (pixel-width . 752) (pixel-height . 664) (total-width . 83) (total-height . 34) (normal-height . 1.0) (normal-width . 1.0) (buffer "init-company.el" (selected . t) (hscroll . 0) (fringes 8 8 nil nil) (margins nil) (scroll-bars nil 2 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 5060) (start . 4683)) (prev-buffers ("init-company.el" 3630 4062) ("*scratch*" 1 146))))])
+(setq comint-input-ring nil)
+(setq compile-history nil)
+(setq desktop-missing-file-warning nil)
+(setq dired-regexp-history nil)
+(setq extended-command-history '("html-mode" "recentf" "org-pandoc-export-to-pptx" "recentf" "org-html5slide-export-to-html" "recentf"))
+(setq face-name-history nil)
+(setq file-name-history '("/home/cyq/文档/GitHub/.emacs.d.cyq.back/lisp/" "/home/cyq/文档/GitHub/.emacs.d.cyq.back/lisp/init-company.el" "/home/cyq/文档/GitHub/.emacs.d/custom.el" "/home/cyq/文档/GitHub/MySite/htmltest/html03.html" "/home/cyq/文档/GitHub/.emacs.d/custom.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-editing-utils.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-better-default.el" "/home/cyq/文档/GitHub/My_Note/My_Notebook.org" "/home/cyq/文档/GitHub/My_Note/note/《学习emacs》笔记.org" "/home/cyq/文档/GitHub/My_Note/emacs笔记.org" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-php.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-org.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-compile.el" "/home/cyq/文档/GitHub/.emacs.d/init.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-web.el" "~/.emacs.d/lisp/init-web.el" "/home/cyq/文档/GitHub/.emacs.d/custom.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-editing-utils.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-better-default.el" "/home/cyq/文档/GitHub/My_Note/My_Notebook.org" "/home/cyq/文档/GitHub/My_Note/note/《学习emacs》笔记.org" "/home/cyq/文档/GitHub/My_Note/emacs笔记.org" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-php.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-org.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-compile.el" "/home/cyq/文档/GitHub/.emacs.d/init.el" "/home/cyq/文档/GitHub/.emacs.d/custom.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-editing-utils.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-better-default.el" "/home/cyq/文档/GitHub/My_Note/My_Notebook.org" "/home/cyq/文档/GitHub/My_Note/note/《学习emacs》笔记.org" "/home/cyq/文档/GitHub/My_Note/emacs笔记.org" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-php.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-org.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-compile.el" "/home/cyq/文档/GitHub/.emacs.d/init.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-org.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-org.el.back" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-php.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-compile.el" "/home/cyq/文档/GitHub/.emacs.d/custom.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-compile.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-editing-utils.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-better-default.back.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-better-default.el" "/home/cyq/文档/GitHub/My_Note/My_Notebook.org" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-org.el.back" "/home/cyq/文档/GitHub/My_Note/note/《学习emacs》笔记.org" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-org.el" "/home/cyq/文档/GitHub/My_Note/emacs笔记.org" "/home/cyq/文档/GitHub/.emacs.d/init.el" "/home/cyq/文档/GitHub/.emacs.d/custom.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-compile.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-editing-utils.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-better-default.back.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-better-default.el" "/home/cyq/文档/GitHub/My_Note/My_Notebook.org" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-org.el.back" "/home/cyq/文档/GitHub/My_Note/note/《学习emacs》笔记.org" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-org.el" "/home/cyq/文档/GitHub/My_Note/emacs笔记.org" "/home/cyq/文档/GitHub/.emacs.d/init.el" "/home/cyq/文档/GitHub/.emacs.d/custom.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-compile.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-editing-utils.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-better-default.back.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-better-default.el" "/home/cyq/文档/GitHub/My_Note/My_Notebook.org" "/home/cyq/文档/GitHub/.emacs.d/init.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-org.el.back" "/home/cyq/文档/GitHub/My_Note/note/《学习emacs》笔记.org" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-org.el" "/home/cyq/文档/GitHub/My_Note/emacs笔记.org" "/home/cyq/文档/GitHub/My_Note/emacs笔记.docx" "/home/cyq/文档/GitHub/My_Note/emacs笔记.pptx" "/home/cyq/文档/GitHub/.emacs.d/custom.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-compile.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-editing-utils.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-better-default.back.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-better-default.el" "/home/cyq/文档/GitHub/My_Note/My_Notebook.org" "/home/cyq/文档/GitHub/.emacs.d/init.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-org.el.back" "/home/cyq/文档/GitHub/My_Note/note/《学习emacs》笔记.org" "/home/cyq/文档/GitHub/My_Note/emacs笔记.org" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-org.el" "/home/cyq/文档/GitHub/My_Note/emacs笔记.org" "/home/cyq/文档/GitHub/.emacs.d/custom.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-compile.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-editing-utils.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-better-default.back.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-better-default.el" "/home/cyq/文档/GitHub/My_Note/My_Notebook.org" "/home/cyq/文档/GitHub/.emacs.d/init.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-org.el.back" "/home/cyq/文档/GitHub/My_Note/note/《学习emacs》笔记.org" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-org.el" "/home/cyq/文档/GitHub/.emacs.d/custom.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-compile.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-editing-utils.el"))
+(setq grep-find-history nil)
+(setq grep-history nil)
+(setq minibuffer-history '("/home/cyq/文档/GitHub/.emacs.d/lisp/init-compile.el" "/home/cyq/文档/GitHub/.emacs.d/init.el" "/home/cyq/文档/GitHub/My_Note/emacs笔记.org" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-org.el" "/home/cyq/文档/GitHub/My_Note/emacs笔记.org" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-org.el" "/home/cyq/文档/GitHub/My_Note/emacs笔记.org" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-org.el" "/home/cyq/文档/GitHub/.emacs.d/lisp/init-better-default.back.el" "/home/cyq/文档/GitHub/.emacs.d/init.el"))
+(setq org-clock-history nil)
+(setq org-refile-history nil)
+(setq org-tags-history nil)
+(setq query-replace-history nil)
+(setq read-expression-history nil)
+(setq regexp-history nil)
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq search-ring nil)
+(setq shell-command-history nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 208
+  "/home/cyq/文档/GitHub/.emacs.d.cyq.back/lisp/init-company.el"
+  "init-company.el"
+  'emacs-lisp-mode
+  '(font-lock-mode eldoc-mode hungry-delete-mode whole-line-or-region-local-mode page-break-lines-mode corfu-mode flymake-mode display-line-numbers-mode display-fill-column-indicator-mode rainbow-delimiters-mode symbol-overlay-mode)
+  5060
+  '(4046 nil)
+  nil
+  nil
+  '((buffer-display-time 26262 25408 496126 670000) (buffer-file-coding-system . utf-8-unix))
+  '((mark-ring (4027 1662 1511 1402 136 59 224 85 86 195 116 168 148 224 204 5060))))
+

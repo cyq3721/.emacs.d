@@ -1,13 +1,13 @@
 
 ;; ----- amx-history -----
 (
+ global-set-key
  web-mode
  php-mode
  neotree
  emmet-mode
  customize-group
  imenu-add-menubar-index
- imenu
 )
 
 ;; ----- amx-data -----
@@ -27,7 +27,7 @@
  (byte-compile-file . 2)
  (php-mode . 3)
  (image-mode . 1)
- (global-set-key . 1)
+ (global-set-key . 3)
  (replace-string . 2)
  (org-display-inline-images . 1)
  (org-pandoc-export-to-docx . 1)

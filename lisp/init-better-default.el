@@ -40,7 +40,7 @@
 (global-hl-line-mode t)             ;;高亮当前行
 (global-font-lock-mode t)        ;;进行语法加亮
 (delete-selection-mode 1)           ;;删除和替换选中部分
-;;(global-linum-mode t)                ;;全局开启行号
+;;(global-linum-mode t)                ;;全局开启行号,emacs29 开始废弃
 ;(column-number-mode t)   ; 在 Mode line 上显示列号
 (global-display-line-numbers-mode 1)         ; 在 Window 显示行号
 (electric-indent-mode t)             ;;回车自动缩进

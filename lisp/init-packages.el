@@ -45,6 +45,7 @@
 		       popwin
                        mmm-mode
 		       ox-pandoc
+		       pandoc-mode
 		hungry-delete
 		swiper
 		counsel
