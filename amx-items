@@ -1,13 +1,13 @@
 
 ;; ----- amx-history -----
 (
+ company-tabnine-install-binary
+ eshell
  global-set-key
  web-mode
  php-mode
  neotree
  emmet-mode
- customize-group
- imenu-add-menubar-index
 )
 
 ;; ----- amx-data -----
@@ -31,10 +31,10 @@
  (replace-string . 2)
  (org-display-inline-images . 1)
  (org-pandoc-export-to-docx . 1)
- (eshell . 1)
+ (eshell . 2)
  (imenu . 1)
  (imenu-add-menubar-index . 3)
- (company-tabnine-install-binary . 2)
+ (company-tabnine-install-binary . 3)
  (customize-group . 1)
  (emmet-mode . 3)
 )

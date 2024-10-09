@@ -70,6 +70,7 @@
 		htmlize
 		yasnippet
 		markdown-mode
+		tabnine
 		company-tabnine
 	;;	dirvish
 		;;Pyenv-mode

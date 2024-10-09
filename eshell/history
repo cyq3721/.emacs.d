@@ -1,1 +1,35 @@
 ls 
+ls
+cd MySite/
+ls
+cd ..
+ls
+cd My_Note/
+ls
+emacs My_Notebook.org 
+ls
+cd ..
+ls
+cd hello-emacs/
+ls
+ls -l
+emacs Emacs中的shell--Eshell使用笔记.org 
+find-fill Emacs中的shell--Eshell使用笔记.org 
+find-file Emacs中的shell--Eshell使用笔记.org 
+ls
+cd ..
+cd ..
+ls
+cd ..
+ls
+cd OneDrive_cyq/
+ls
+cd 文档
+ls
+find-file *.pdf
+find-file *.docx
+cd ..
+ls
+find-file test.org
+ls
+ls -l
