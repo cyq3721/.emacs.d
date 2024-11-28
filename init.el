@@ -70,7 +70,6 @@
 (require 'init-ibuffer)
 (require 'init-org)
 (require 'init-dired)
-
 (require 'init-html)
 (require 'init-company)
 ;;; init.el ends here
