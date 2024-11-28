@@ -5,8 +5,9 @@
 ;;(require 'flycheck )
 ;;(global-flycheck-mode t)
 (require-package 'yasnippet)
+(require-package 'web-mode)
 (require 'web-mode)
-
+(require-package 'company-web)
 (require 'company-web-html)
 (require 'company-web-jade)
 (require 'company-web-slim)

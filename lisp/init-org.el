@@ -24,7 +24,7 @@
 ;;; Code:
 
 (require-package 'org-superstar)
-
+(require-package 'ox-pandoc)
 (when *is-a-mac*
   (maybe-require-package 'grab-mac-link))
 

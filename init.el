@@ -60,6 +60,7 @@
 (require-package 'command-log-mode)
 (require 'init-frame-hooks)
 (require 'init-xterm)
+(require 'init-find)
 (require 'init-themes)
 (require 'init-osx-keys)
 (require 'init-gui-frames)
@@ -69,7 +70,7 @@
 (require 'init-ibuffer)
 (require 'init-org)
 (require 'init-dired)
-(require 'init-find)
+
 (require 'init-html)
 (require 'init-company)
 ;;; init.el ends here
