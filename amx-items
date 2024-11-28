@@ -1,0 +1,24 @@
+
+;; ----- amx-history -----
+(
+ recentf
+ package-install
+ company-mode
+ emmet-mode
+ package-delete
+ web-mode
+ html-mode
+)
+
+;; ----- amx-data -----
+(
+ (recentf . 108)
+ (eval-buffer . 3)
+ (html-mode . 4)
+ (yas-describe-tables . 2)
+ (web-mode . 2)
+ (package-delete . 2)
+ (emmet-mode . 2)
+ (company-mode . 3)
+ (package-install . 2)
+)
