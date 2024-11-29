@@ -2,17 +2,17 @@
 ;; ----- amx-history -----
 (
  recentf
+ global-set-key
  package-install
  company-mode
  emmet-mode
  package-delete
  web-mode
- html-mode
 )
 
 ;; ----- amx-data -----
 (
- (recentf . 109)
+ (recentf . 115)
  (eval-buffer . 3)
  (html-mode . 4)
  (yas-describe-tables . 2)
@@ -21,4 +21,5 @@
  (emmet-mode . 2)
  (company-mode . 3)
  (package-install . 2)
+ (global-set-key . 2)
 )

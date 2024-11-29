@@ -32,7 +32,6 @@
 ;; Bootstrap config
 
 
-(setq custom-file (locate-user-emacs-file "custom.el"))
 
 (require 'init-utils)
 (require 'init-site-lisp)
@@ -61,7 +60,6 @@
 (require 'init-frame-hooks)
 (require 'init-xterm)
 (require 'init-find)
-(require 'init-themes)
 (require 'init-osx-keys)
 (require 'init-gui-frames)
 ;(require 'init-corfu)
@@ -72,4 +70,8 @@
 (require 'init-dired)
 (require 'init-html)
 (require 'init-company)
+(require 'init-themes)
+(require 'init-my-emacs)
+(setq custom-file (locate-user-emacs-file "custom.el"))
+
 ;;; init.el ends here
