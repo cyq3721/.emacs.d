@@ -2,19 +2,19 @@
 ;; ----- amx-history -----
 (
  recentf
- global-set-key
- package-install
- company-mode
- emmet-mode
- package-delete
- web-mode
+ all-the-icons-install-fonts
+ dired
+ all-the-icons-ibuffer-mode
+ eglot
+ html-mode
+ speedbar
 )
 
 ;; ----- amx-data -----
 (
- (recentf . 115)
+ (recentf . 137)
  (eval-buffer . 3)
- (html-mode . 4)
+ (html-mode . 5)
  (yas-describe-tables . 2)
  (web-mode . 2)
  (package-delete . 2)
@@ -22,4 +22,9 @@
  (company-mode . 3)
  (package-install . 2)
  (global-set-key . 2)
+ (all-the-icons-install-fonts . 5)
+ (speedbar . 3)
+ (eglot . 3)
+ (all-the-icons-ibuffer-mode . 1)
+ (dired . 1)
 )

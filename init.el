@@ -54,6 +54,8 @@
 (require 'init-preload-local nil t)
 
 ;; Load configs for specific features and modes
+
+(setq custom-file (locate-user-emacs-file "custom.el"))
 (require-package 'diminish)
 (maybe-require-package 'scratch)
 (require-package 'command-log-mode)
@@ -71,7 +73,7 @@
 (require 'init-html)
 (require 'init-company)
 (require 'init-themes)
-(require 'init-my-emacs)
-(setq custom-file (locate-user-emacs-file "custom.el"))
+;(require 'init-my-emacs)
+
 
 ;;; init.el ends here
