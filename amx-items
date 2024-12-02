@@ -1,8 +1,8 @@
 
 ;; ----- amx-history -----
 (
- vertico-mode
  recentf
+ vertico-mode
  consult-imenu
  all-the-icons-install-fonts
  dired
@@ -12,7 +12,7 @@
 
 ;; ----- amx-data -----
 (
- (recentf . 142)
+ (recentf . 145)
  (eval-buffer . 3)
  (html-mode . 5)
  (yas-describe-tables . 2)

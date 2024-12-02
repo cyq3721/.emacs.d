@@ -71,7 +71,7 @@
 (require 'init-org)
 (require 'init-dired)
 (require 'init-html)
-;(require 'init-company)
+(require 'init-company)
 (require 'init-themes)
 ;(require 'init-my-emacs)
 

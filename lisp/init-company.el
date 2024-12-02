@@ -22,7 +22,7 @@
 
 ;(company-quickhelp-mode 1)
 
-(add-hook 'after-init-hook 'global-company-mode)  ;;开启补全
+;;(add-hook 'after-init-hook 'global-company-mode)  ;;开启补全
 
 (eval-after-load 'company
    '(define-key company-active-map (kbd "C-c h") 'company-quickhelp-manual-begin))
@@ -47,8 +47,11 @@
 
 
 (add-hook 'web-mode-hook (lambda ()
-                          (set (make-local-variable 'company-backends) '(company-web-html))
-                          (company-mode t)))
+                           (set (make-local-variable 'company-backends)
+                         '(company-web-html))
+                           (company-mode t)
+                           (vertico-mode nil)
+                          ))
 
 ;;颜色设置
 (custom-set-faces
