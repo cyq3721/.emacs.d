@@ -1,18 +1,18 @@
 
 ;; ----- amx-history -----
 (
+ vertico-mode
  recentf
+ consult-imenu
  all-the-icons-install-fonts
  dired
  all-the-icons-ibuffer-mode
  eglot
- html-mode
- speedbar
 )
 
 ;; ----- amx-data -----
 (
- (recentf . 137)
+ (recentf . 142)
  (eval-buffer . 3)
  (html-mode . 5)
  (yas-describe-tables . 2)
@@ -22,9 +22,11 @@
  (company-mode . 3)
  (package-install . 2)
  (global-set-key . 2)
- (all-the-icons-install-fonts . 5)
+ (all-the-icons-install-fonts . 6)
  (speedbar . 3)
  (eglot . 3)
  (all-the-icons-ibuffer-mode . 1)
  (dired . 1)
+ (consult-imenu . 1)
+ (vertico-mode . 2)
 )

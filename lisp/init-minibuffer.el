@@ -42,14 +42,14 @@
         (require 'embark-consult)
         (add-hook 'embark-collect-mode-hook 'embark-consult-preview-minor-mode)))))
 
-;(when (maybe-require-package 'marginalia)
-;  (add-hook 'after-init-hook 'marginalia-mode))
+(when (maybe-require-package 'marginalia)
+  (add-hook 'after-init-hook 'marginalia-mode))
 
-;(require-package 'orderless)
-;(setq completion-styles '(orderless))
+(require-package 'orderless)
+(setq completion-styles '(orderless))
 
-;(require-package 'keycast)
-;(keycast-header-line-mode)
+(require-package 'keycast)
+(keycast-header-line-mode)
 
 (provide 'init-minibuffer)
 ;;; init-minibuffer.el ends here
