@@ -75,7 +75,8 @@
 (defun my-web-mode-hook ()
   "Hook for `web-mode'."
     (set (make-local-variable 'company-backends)
-         '(company-tern company-web-html company-yasnippet company-files)))
+         '(;;company-tern
+           company-web-html company-yasnippet company-files)))
 
 (add-hook 'web-mode-hook 'my-web-mode-hook)
 

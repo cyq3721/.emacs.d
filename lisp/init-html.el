@@ -44,7 +44,22 @@
 ;;--------------------------------------------------
 (defun my-web-mode-hook ()      ;;建立函数（在web-mode下运行的函数）
   "Hooks for Web mode."
+ ;; make these variables local
+  (make-local-variable 'web-mode-code-indent-offset)
+  (make-local-variable 'web-mode-markup-indent-offset)
+  (make-local-variable 'web-mode-css-indent-offset)
+  
   (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-code-indent-offset 4)
+  (setq web-mode-css-indent-offset 2)
+
+  (setq web-mode-ac-sources-alist
+      '(("css" . (ac-source-words-in-buffer ac-source-css-property))
+        ("html" . (ac-source-words-in-buffer ac-source-abbrev))
+        ("php" . (ac-source-words-in-buffer
+                  ac-source-words-in-same-mode-buffers
+                  ac-source-dictionary))))
+ 
   (set (make-local-variable 'company-backends) '(company-css company-web-html company-yasnippet company-files))
 )
 (add-hook 'web-mode-hook  'my-web-mode-hook)
