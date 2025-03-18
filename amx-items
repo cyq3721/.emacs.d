@@ -12,7 +12,7 @@
 
 ;; ----- amx-data -----
 (
- (recentf . 182)
+ (recentf . 183)
  (eval-buffer . 3)
  (html-mode . 5)
  (yas-describe-tables . 2)
