@@ -33,37 +33,19 @@
 
 
 
-(require 'init-utils)
-(require 'init-site-lisp)
+;;(require 'init-utils)
+;;(require 'init-site-lisp)
 
 ;; Calls (package-initialize)
 (require 'init-elpa)      ;; Machinery for installing required packages
-(require 'init-exec-path) ;; Set up $PATH
-
-
-;; General performance tuning
-(when (require-package 'gcmh)
-  (setq gcmh-high-cons-threshold (* 128 1024 1024))
-  (add-hook 'after-init-hook (lambda ()
-                               (gcmh-mode)
-                               (diminish 'gcmh-mode))))
-
-(setq jit-lock-defer-time 0)
-
-;; Allow users to provide an optional "init-preload-local.el"
-(require 'init-preload-local nil t)
-
-;; Load configs for specific features and modes
 
 (setq custom-file (locate-user-emacs-file "custom.el"))
-(require-package 'diminish)
-(maybe-require-package 'scratch)
-(require-package 'command-log-mode)
+
 (require 'init-frame-hooks)
 (require 'init-xterm)
-(require 'init-find)
+(require 'init-find)  ;;配置 counsel，ivy 等
 (require 'init-osx-keys)
-(require 'init-gui-frames)
+(require 'init-gui-frames)  ;;取消工具栏，隐藏启动画面等
 (require 'init-corfu)
 (require 'init-editing-utils)
 (require 'init-minibuffer)
@@ -74,6 +56,3 @@
 (require 'init-company)
 (require 'init-themes)
 ;(require 'init-my-emacs)
-
-
-;;; init.el ends here

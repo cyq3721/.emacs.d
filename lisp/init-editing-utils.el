@@ -2,7 +2,14 @@
 ;;; Commentary:
 ;;; Code:
 
+(add-to-list 'load-path "/Users/cyq/Documents/GitHub/.emacs.d/elpa-30.1/page-break-lines-20250218.1607")
+(require 'page-break-lines)
+(global-page-break-lines-mode)
+
+
 (require-package 'unfill)
+(require-package 'diminish)
+
 
 (when (fboundp 'electric-pair-mode)
   (add-hook 'after-init-hook 'electric-pair-mode))
@@ -82,7 +89,7 @@
 (with-eval-after-load 'subword
   (diminish 'subword-mode))
 
-
+
 
 (when (fboundp 'display-line-numbers-mode)
   (setq-default display-line-numbers-width 3)
@@ -125,8 +132,8 @@
   (define-key browse-kill-ring-mode-map (kbd "C-g") 'browse-kill-ring-quit)
   (define-key browse-kill-ring-mode-map (kbd "M-n") 'browse-kill-ring-forward)
   (define-key browse-kill-ring-mode-map (kbd "M-p") 'browse-kill-ring-previous))
-(with-eval-after-load 'page-break-lines
-  (add-to-list 'page-break-lines-modes 'browse-kill-ring-mode))
+;;(with-eval-after-load 'page-break-lines
+ ;; (add-to-list 'page-break-lines-modes 'browse-kill-ring-mode))
 
 
 ;; Don't disable narrowing commands
@@ -180,10 +187,10 @@
 
 ;;; Page break lines
 
-(when (maybe-require-package 'page-break-lines)
-  (add-hook 'after-init-hook 'global-page-break-lines-mode)
-  (with-eval-after-load 'page-break-lines
-    (diminish 'page-break-lines-mode)))
+;(when (maybe-require-package 'page-break-lines)
+;  (add-hook 'after-init-hook 'global-page-break-lines-mode)
+;  (with-eval-after-load 'page-break-lines
+;    (diminish 'page-break-lines-mode)))
 
 
 
@@ -198,7 +205,7 @@
 (global-set-key (kbd "C-c d") 'move-dup-duplicate-down)
 (global-set-key (kbd "C-c u") 'move-dup-duplicate-up)
 
-
+
 ;;; Fix backward-up-list to understand quotes, see http://bit.ly/h7mdIL
 
 (defun sanityinc/backward-up-sexp (arg)
@@ -221,11 +228,11 @@
   (diminish 'whole-line-or-region-local-mode))
 
 
-
+
 ;; M-^ is inconvenient, so also bind M-j
 (global-set-key (kbd "M-j") 'join-line)
 
-
+
 ;; Random line sorting
 (defun sanityinc/sort-lines-random (beg end)
   "Sort lines in region from BEG to END randomly."

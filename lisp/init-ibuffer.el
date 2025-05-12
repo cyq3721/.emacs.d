@@ -7,6 +7,7 @@
 ;;; Code:
 
 (require-package 'ibuffer-vc)
+;;(require-package 'fullframe)
 
 (defun ibuffer-set-up-preferred-filters ()
   (ibuffer-vc-set-filter-groups-by-vc-root)
@@ -17,7 +18,7 @@
 
 (setq-default ibuffer-show-empty-filter-groups nil)
 
-(sanityinc/fullframe-mode 'ibuffer-mode)
+;;(sanityinc/fullframe-mode 'ibuffer-mode)
 
 
 (with-eval-after-load 'ibuffer

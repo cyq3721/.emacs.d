@@ -25,6 +25,9 @@
 
 (require-package 'org-superstar)
 (require-package 'ox-pandoc)
+(require-package 'ox-gfm) ;;   导出 markdown
+
+
 (when *is-a-mac*
   (maybe-require-package 'grab-mac-link))
 
@@ -405,6 +408,8 @@ typical word processor."
 (setq org-pandoc-options-for-latex-pdf '((pdf-engine . "pdflatex")))
 ;; special extensions for markdown_github output
 (setq org-pandoc-format-extensions '(markdown_github+pipe_tables+raw_html))
+
+(setq org-pandoc-option-for-markdown '((standalone . t)))
 
 
 (provide 'init-org)
