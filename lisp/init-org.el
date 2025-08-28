@@ -27,6 +27,8 @@
 (require-package 'ox-pandoc)
 (require-package 'ox-gfm) ;;   导出 markdown
 
+(eval-after-load "org"
+  '(require 'ox-gfm nil t))
 
 (when *is-a-mac*
   (maybe-require-package 'grab-mac-link))

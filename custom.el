@@ -15,11 +15,11 @@
                        embark embark-consult emmet-mode
                        gnu-elpa-keyring-update grab-mac-link
                        highlight-escape-sequences ibuffer-vc keycast
-                       list-unicode-display marginalia mode-line-bell
-                       move-dup multiple-cursors ns-auto-titlebar
-                       orderless org-cliplink org-pomodoro
-                       org-superstar ox-gfm ox-pandoc php-mode
-                       rainbow-delimiters seq spacemacs-theme
+                       list-unicode-display marginalia markdown-mode
+                       mode-line-bell move-dup multiple-cursors
+                       ns-auto-titlebar orderless org-cliplink
+                       org-pomodoro org-superstar ox-gfm ox-pandoc
+                       php-mode rainbow-delimiters seq spacemacs-theme
                        symbol-overlay unfill vertico vlf web-mode
                        which-key whole-line-or-region writeroom-mode
                        yasnippet))

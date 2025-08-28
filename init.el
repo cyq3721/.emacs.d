@@ -51,8 +51,10 @@
 (require 'init-minibuffer)
 (require 'init-ibuffer)
 (require 'init-org)
+(require 'init-markdown)
 (require 'init-dired)
 (require 'init-html)
 (require 'init-company)
 (require 'init-themes)
+
 ;(require 'init-my-emacs)

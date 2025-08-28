@@ -2,28 +2,60 @@
 ;;; Commentary:
 ;;; code:
 (require-package 'company)
+(require-package 'emmet-mode)
+(require 'emmet-mode)
 ;;(require 'flycheck )
 ;;(global-flycheck-mode t)
 (require-package 'yasnippet)
 (require-package 'web-mode)
-(require 'web-mode)
 (require-package 'company-web)
+(require 'company)
+(require 'web-mode)
+(require 'yasnippet)
+(require 'company-web)
 (require 'company-web-html)
 (require 'company-web-jade)
 (require 'company-web-slim)
+
 
 (require-package 'ac-html-csswatcher)
 (require-package 'ac-html-bootstrap)
 (require-package 'company-statistics)
 
+(require 'ac-html-csswatcher)
+(require 'ac-html-bootstrap)
+(require 'company-statistics)
+;;(company-web-csswatcher-setup)
+;;(ac-html-csswatcher-setup)
+
+(add-hook 'sgml-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
+(add-hook 'html-mode-hook 'emmet-mode)
+(add-hook 'css-mode-hook  'emmet-mode)
+(add-hook 'web-mode-hook  'emmet-mode)
+
+(add-to-list 'company-backends 'company-web-html)
+(add-to-list 'company-backends 'company-web-jade)
+(add-to-list 'company-backends 'company-web-slim)
+
 ;; you may key bind, for example for web-mode:
-;(define-key web-mode-map (kbd "C-'") 'company-web-html)
+(define-key web-mode-map (kbd "C-'") 'company-web-html)
+
+
+;; (setq company-minimum-prefix-length 0)            ; WARNING, probably you will get perfomance issue if min len is 0!
+(setq company-tooltip-limit 20)                      ; bigger popup window
+(setq company-tooltip-align-annotations 't)          ; align annotations to the right tooltip border
+(setq company-idle-delay .3)                         ; decrease delay before autocompletion popup shows
+(setq company-begin-commands '(self-insert-command)) ; start autocompletion only after typing
+(global-set-key (kbd "C-c /") 'company-files)        ; Force complete file names on "C-c /" key
+
+(add-hook 'web-mode-hook (lambda ()
+                          (set (make-local-variable 'company-backends) '(company-web-html))
+                          (company-mode t)))
 
 
 ;(company-quickhelp-mode 1)
 
 ;;(add-hook 'after-init-hook 'global-company-mode)  ;;开启补全
-
 (eval-after-load 'company
    '(define-key company-active-map (kbd "C-c h") 'company-quickhelp-manual-begin))
 
@@ -92,7 +124,11 @@
                         (if tern-mode (tern-mode -1)))))))
 
 ;; manual autocomplete
-(define-key web-mode-map (kbd "M-SPC") 'company-complete)
+;(define-key web-mode-map (kbd "M-SPC") 'company-complete)
 
 (provide 'init-company)
 ;;; init-company.el ends here
+
+
+
+
