@@ -1,0 +1,40 @@
+;;; init-css.el --- summary
+;;; commentary:
+;;; code:
+
+;; ==================== CSS 开发 ====================
+;; CSS 模式增强
+(use-package css-mode
+  :mode ("\\.css\\'" "\\.scss\\'" "\\.less\\'" "\\.sass\\'")
+  :hook (css-mode . (lambda ()
+                     (setq-local company-backends
+                                 '(company-css company-files))))
+  :config
+  (setq css-indent-offset 2))
+
+;; SCSS 模式
+(use-package scss-mode
+  :mode "\\.scss\\'"
+  :config
+  (setq scss-compile-at-save nil))
+
+;; Less 模式
+(use-package less-css-mode
+  :mode "\\.less\\'")
+
+;; 颜色显示
+(use-package rainbow-mode
+  :hook ((css-mode web-mode) . rainbow-mode)
+  :config
+  (setq rainbow-html-colors t))
+
+
+
+;; CSS 排序
+(use-package css-eldoc
+  :hook (css-mode . css-eldoc-enable))
+
+
+
+(provide 'init-css)
+;;; init-css.el ends here

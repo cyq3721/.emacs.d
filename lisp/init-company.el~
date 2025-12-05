@@ -1,0 +1,50 @@
+;;; init-comany.el --- 配置company补全 -*- lexical-binding: t -*-
+;;; commentary:
+;;; code:
+
+;; 自动补全
+(use-package company
+  :ensure t
+  :hook (prog-mode . company-mode)      ; 按需加载
+  :bind (:map company-active-map        ; 局部键位映射
+              ("C-n" . company-select-next)
+              ("C-p" . company-select-previous))
+  :config
+  (global-company-mode t)
+  (setq company-backends '(company-capf company-dabbrev))
+  (setq company-idle-delay 0.3
+        company-minimum-prefix-length 2
+        company-tooltip-limit 15
+        company-selection-wrap-around t
+        company-show-quick-access t
+        company-require-match nil))
+
+
+
+;; Emmet 模式支持
+(use-package emmet-mode
+  :ensure t
+  :hook ((web-mode . emmet-mode)
+         (css-mode . emmet-mode))
+  :config
+  (setq emmet-move-cursor-between-quotes t
+        emmet-indent-after-insert t
+        emmet-expand-jsx-className? t)
+  
+  ;; Emmet 快捷键
+  :bind (:map emmet-mode-keymap
+         ("C-j" . nil)  ;; 解除默认绑定
+         ("C-c e e" . emmet-expand-line)
+         ("C-c e p" . emmet-prev-edit-point)
+         ("C-c e n" . emmet-next-edit-point)))
+
+;; 代码折叠
+(use-package web-mode
+  :config
+  (setq web-mode-enable-auto-expanding t
+        web-mode-enable-block-face t
+        web-mode-enable-part-face t))
+
+
+(provide 'init-company)
+;;; init-company.el ends here

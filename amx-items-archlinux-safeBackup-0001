@@ -1,0 +1,30 @@
+
+;; ----- amx-history -----
+(
+ php-mode
+ fundamental-mode
+ describe-mode
+ web-mode
+ lsp-ui-mode
+ emacs-lisp-mode
+ lsp-install-server
+)
+
+;; ----- amx-data -----
+(
+ (recentf-open . 1)
+ (keycast-tab-bar-mode . 5)
+ (lsp-install-server . 14)
+ (lsp-log-io-mode . 1)
+ (eval-buffer . 1)
+ (nerd-icons-install-fonts . 4)
+ (nerd-icons-insert-wicon . 1)
+ (speedbar . 1)
+ (php-ts-mode-run-php-webserver . 1)
+ (emacs-lisp-mode . 1)
+ (lsp-ui-mode . 2)
+ (web-mode . 1)
+ (describe-mode . 1)
+ (fundamental-mode . 1)
+ (php-mode . 1)
+)

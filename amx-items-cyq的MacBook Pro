@@ -1,0 +1,36 @@
+
+;; ----- amx-history -----
+(
+ recentf
+ web-mode
+ html-mode
+ insert-file
+ auto-image-file-mode
+ emmet-mode
+ company-web-csswatcher+
+)
+
+;; ----- amx-data -----
+(
+ (recentf . 261)
+ (eval-buffer . 3)
+ (html-mode . 6)
+ (yas-describe-tables . 2)
+ (web-mode . 5)
+ (package-delete . 2)
+ (emmet-mode . 4)
+ (company-mode . 3)
+ (package-install . 2)
+ (global-set-key . 2)
+ (all-the-icons-install-fonts . 6)
+ (speedbar . 3)
+ (eglot . 3)
+ (all-the-icons-ibuffer-mode . 1)
+ (dired . 1)
+ (consult-imenu . 1)
+ (vertico-mode . 2)
+ (package-list-packages . 3)
+ (company-web-csswatcher+ . 2)
+ (auto-image-file-mode . 1)
+ (insert-file . 3)
+)

@@ -1,0 +1,74 @@
+;;; init-web.el --- -*-lexical-binding: t-*-
+;;; commentary:
+;;; code:
+
+;; HTML Language Server 完整配置
+;; Web 模式
+(use-package web-mode
+  :mode
+  ("\\.html\\'" "\\.htm\\'" "\\.php\\'" "\\.phtml\\'" "\\.tpl\\.php\\'"
+   "\\.twig\\'" "\\.xml\\'" "\\.svg\\'" "\\.vue\\'" "\\.jsx\\'" "\\.tsx\\'")
+  :config
+  (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-css-indent-offset 2)
+  (setq web-mode-code-indent-offset 2)
+  (setq web-mode-script-padding 2)
+  (setq web-mode-style-padding 2)
+  (setq web-mode-enable-auto-pairing t)
+  (setq web-mode-enable-auto-closing t)
+  (setq web-mode-enable-auto-quoting t)
+  (setq web-mode-enable-current-element-highlight t)
+  (setq web-mode-enable-current-column-highlight t)
+  (setq web-mode-ac-sources-alist
+        '(("css" . (ac-source-css-property))
+          ("html" . (ac-source-words-in-buffer ac-source-abbrev)))))
+
+;; Emmet 模式
+(use-package emmet-mode
+  :hook ((web-mode css-mode sgml-mode) . emmet-mode)
+  :config
+  (setq emmet-move-cursor-between-quotes t)
+  (setq emmet-indent-after-insert t)
+  (setq emmet-expand-jsx-className? t)
+  :bind
+  ("C-c e" . emmet-expand-line))
+  
+ 
+;; 标签导航
+(use-package smartparens
+  :hook (web-mode . smartparens-mode)
+  :config
+  (require 'smartparens-html)
+  (sp-with-modes '(web-mode)
+    (sp-local-pair "<" ">")
+    (sp-local-pair "<!--" "-->")))
+
+;; 实时预览
+(use-package impatient-mode
+  :commands (impatient-mode))
+
+;; 浏览器刷新
+(use-package simple-httpd
+  :config
+  (setq httpd-root "~/www"))
+
+;; 浏览器刷新
+(use-package simple-httpd
+  :config
+  (setq httpd-root "~/www"))
+
+(defun my-browser-refresh ()
+ ;; "刷新浏览器"
+  (interactive)
+  (browse-url-of-buffer))
+
+;; HTML 标签补全
+(use-package company-web
+  :after company
+  :config
+  (add-to-list 'company-backends 'company-web-html)
+  (add-to-list 'company-backends 'company-web-jade)
+  (add-to-list 'company-backends 'company-web-slim))
+
+(provide 'init-web)
+;;; init-web.el ends here

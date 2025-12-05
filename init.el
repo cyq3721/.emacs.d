@@ -1,0 +1,35 @@
+;;; Init.el --- configuration fil-*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
+(add-to-list 'load-path "~/.emacs.d/lisp")
+;;config custom.el
+(setq custom-file (expand-file-name "~/.emacs.d/custom.el"))
+(load custom-file 'no-error 'no-message)
+
+;; 禁用所有缓冲区的只读模式
+(setq-default buffer-read-only nil)
+
+;; 确保 minibuffer 不会变成只读
+(defun my/disable-minibuffer-read-only() ;; "确保 minibuffer 不是只读的"
+  (when (minibufferp)
+    (setq-local buffer-read-only nil)))
+(add-hook 'minibuffer-setup-hook #'my/disable-minibuffer-read-only)
+
+
+(require 'init-packages)
+(require 'init-better-default)
+(require 'init-minibuffer)
+(require 'init-company)
+(require 'init-find)
+(require 'init-org)
+(require 'init-web)
+(require 'init-css)
+(require 'init-php)
+(require 'init-flycheck)
+(require 'init-project)
+;(require 'init-lsp)
+(require 'init-theme)
+
+;(require 'init-use-package)
+
+;;; init.el ends here
