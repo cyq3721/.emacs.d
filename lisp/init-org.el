@@ -19,6 +19,7 @@
   (org-hide-emphasis-markers t)              ; 隐藏格式标记
   (org-pretty-entities t)                    ; 美化实体显示
   (org-ellipsis " ↴")                        ; 折叠符号
+
   
   ;; 编辑设置
   (org-special-ctrl-a/e t)                   ; 改进的行首/行尾导航
@@ -196,7 +197,7 @@
 
 ;; 代码块导出样式
 (setq org-html-htmlize-output-type 'css)
-  
+
   :bind
   (("C-c l" . org-store-link)
    ("C-c a" . org-agenda)
@@ -208,15 +209,18 @@
   (unless (file-exists-p org-directory)
     (make-directory org-directory t))
   ;;各级标题字体大小
-  (org-document-title ((t (:height 1.5 :weight bold))))
-  (org-level-1 ((t (:height 1.3 :weight bold))))
-  (org-level-2 ((t (:height 1.2 :weight bold))))
-  (org-level-3 ((t (:height 1.1 :weight bold))))
-  (org-level-4 ((t (:height 1.0 :weight bold))))
+ ; (org-document-title ((t (:height 1.5 :weight bold))))
+ ;(set-face-attribute 'org-level-1 nil :height 1.6)  ; 1级标题，160%大小
+ ;(set-face-attribute 'org-level-2 nil :height 1.4)  ; 2级标题，140%大小
+; (set-face-attribute 'org-level-3 nil :height 1.2)  ; 3级标题，120%大小
+; (set-face-attribute 'org-level-4 nil :height 1.1)  ; 4级标题，110%大小
   ;; 源代码块语法高亮
   (setq org-src-fontify-natively t)      ; 使用原模式语法高亮
   (setq org-src-tab-acts-natively t)     ; TAB 在原模式中工作
   (setq org-src-preserve-indentation t)  ; 保留源代码缩进
+  ;;设置导出文件的目录
+  (setq org-export-output-directory "~/My_Note/org_Exports/")
+  
   )
 
 ;; ====================
@@ -236,7 +240,46 @@
 
 (use-package ox-pandoc
   :ensure t
-  :defer t)
+  :defer t
+  :custom
+  ;; 设置 pandoc 导出的默认目录
+  (setq org-pandoc-export-directory "~/My_Note/org_Exports/")
+ :config
+  ;; 启用 ox-pandoc 导出后端
+ (ox-pandoc-set)
+ ;; default options for all output formats
+(setq org-pandoc-options '((standalone . t)))
+;; cancel above settings only for 'docx' format
+(setq org-pandoc-options-for-docx '((standalone . nil)))
+;; special settings for beamer-pdf and latex-pdf exporters
+(setq org-pandoc-options-for-beamer-pdf '((pdf-engine . "xelatex")))
+(setq org-pandoc-options-for-latex-pdf '((pdf-engine . "pdflatex")))
+;; special extensions for markdown_github output
+(setq org-pandoc-format-extensions '(markdown_github+pipe_tables+raw_html))
+  ;; 自定义导出格式在菜单中的显示
+  (setq org-pandoc-menu-entry
+        '(
+          (?p "as Pandoc PDF" org-pandoc-export-to-pdf)
+          (?w "as Pandoc DOCX" org-pandoc-export-to-docx)
+          (?h "as Pandoc HTML" org-pandoc-export-to-html)
+          (?e "as Pandoc EPUB" org-pandoc-export-to-epub)
+          (?l "as Pandoc LaTeX" org-pandoc-export-to-latex)
+          (?m "as Pandoc Markdown" org-pandoc-export-to-markdown)
+          ))
+  ;; 或者直接添加到导出菜单选项
+  (define-key org-mode-map (kbd "C-c C-e p")
+         (lambda ()
+           (interactive)
+           (org-pandoc-export))))
+  
+ 
+
+(use-package pandoc-mode
+  :ensure t
+  :config
+  (pandoc-mode t)
+  (global-set-key (kbd "C-c p") 'pandoc-main-hydra))
+
 
 ;;(use-package org-bullets
  ;; :ensure t
@@ -259,18 +302,6 @@
 ;; ====================
 
 ;; 安装 org-roam（知识管理）
-(use-package org-roam
-  :ensure t
-  :custom
-  (org-roam-directory "~/My_Note/org/roam")
-  (org-roam-completion-everywhere t)
-  :bind (("C-c n l" . org-roam-buffer-toggle)
-         ("C-c n f" . org-roam-node-find)
-         ("C-c n i" . org-roam-node-insert)
-         :map org-mode-map
-         ("C-M-i" . completion-at-point))
-  :config
-  (org-roam-setup))
 
 ;; 安装 org-superstar（更好的标题图标）
 (use-package org-superstar
@@ -290,13 +321,13 @@
          ("s-y" . org-download-yank)))
   :custom
   (org-download-method 'directory)
-  (org-download-image-dir "./images")
+  (org-download-image-dir "./My_Note/org/images")
   (org-download-heading-lvl nil))
 
 ;; 安装 org-pomodoro（番茄工作法）
 (use-package org-pomodoro
   :ensure t
   :bind ("C-c p" . org-pomodoro))
-  
+
 (provide 'init-org)
 ;;; init-org.el ends here

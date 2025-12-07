@@ -1,16 +1,19 @@
 
 ;; ----- amx-history -----
 (
+ org-roam-db-sync
+ my/batch-convert-titles
+ org-roam-node-find
+ web-mode
  cd
  5x5
  amx
- arp
- dbx
- dig
- erc
 )
 
 ;; ----- amx-data -----
 (
- 
+ (web-mode . 1)
+ (org-roam-db-sync . 10)
+ (org-roam-node-find . 1)
+ (my/batch-convert-titles . 1)
 )

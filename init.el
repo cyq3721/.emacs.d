@@ -21,7 +21,6 @@
 (require 'init-minibuffer)
 (require 'init-company)
 (require 'init-find)
-(require 'init-org)
 (require 'init-web)
 (require 'init-css)
 (require 'init-php)
@@ -29,7 +28,7 @@
 (require 'init-project)
 ;(require 'init-lsp)
 (require 'init-theme)
-
+(require 'init-org)
 ;(require 'init-use-package)
 
 ;;; init.el ends here

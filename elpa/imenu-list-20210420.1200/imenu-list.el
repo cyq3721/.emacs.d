@@ -740,6 +740,7 @@ afterwards."
       (bury-buffer (get-buffer imenu-list-buffer-name)))))
 
 ;;;###autoload
+
 (defun imenu-list-smart-toggle ()
   "Enable or disable `imenu-list-minor-mode' according to buffer's visibility.
 If the imenu-list buffer is displayed in any window, disable

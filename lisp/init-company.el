@@ -23,14 +23,14 @@
 (use-package company-php
   :after company
   :config
-  (add-to-list 'company-backends 'company-php))
+  (add-to-list 'company-backends 'company-ac-php-backend))
 
 ;; Web 开发补全
 (use-package company-web
   :after company
   :config
   (add-to-list 'company-backends 'company-web-html)
-  (add-to-list 'company-backends 'company-web-css))
+  (add-to-list 'company-backends 'company-css))
 
 ;; 代码导航
 (use-package dumb-jump

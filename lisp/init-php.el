@@ -64,9 +64,9 @@
   ("C-c t c" . phpunit-current-class)
   ("C-c t p" . phpunit-current-project))
 
-(use-package phpstan
-  :ensure t
-  )
+;(use-package phpstan
+ ; :ensure t
+  ;)
 
 (defun my-php-mode-setup ()
   "My PHP-mode hook."
@@ -76,11 +76,11 @@
 (add-hook 'php-mode-hook 'my-php-mode-setup)
 
 ;; PHP 代码质量
-(use-package flycheck-phpstan
-  :after flycheck
-  :config
+;(use-package flycheck-phpstan
+ ; :after flycheck
+  ;:config
  ; (flycheck-phpstan-turn-on))
-)
+;)
 
 
 

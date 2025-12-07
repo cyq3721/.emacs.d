@@ -14,11 +14,11 @@
 ;  ("C-c p" . flycheck-previous-error))
 )
 ;; PHP 语法检查器
-(use-package flycheck-phpstan
-  :after flycheck
+;(use-package flycheck-phpstan
+ ; :after flycheck
   :config
   ;(flycheck-phpstan-setup)
-  )
+  ;)
 
 ;; HTML 验证
 ;(use-package flycheck-html-validator
