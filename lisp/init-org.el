@@ -245,8 +245,7 @@
   ;; 设置 pandoc 导出的默认目录
   (setq org-pandoc-export-directory "~/My_Note/org_Exports/")
  :config
-  ;; 启用 ox-pandoc 导出后端
- (ox-pandoc-set)
+ 
  ;; default options for all output formats
 (setq org-pandoc-options '((standalone . t)))
 ;; cancel above settings only for 'docx' format
@@ -316,9 +315,9 @@
   (org-download-heading-lvl nil))
 
 ;; 安装 org-pomodoro（番茄工作法）
-(use-package org-pomodoro
-  :ensure t
-  :bind ("C-c p" . org-pomodoro))
+;(use-package org-pomodoro
+ ; :ensure t
+ ; :bind ("C-c p" . org-pomodoro))
 
 (provide 'init-org)
 ;;; init-org.el ends here
