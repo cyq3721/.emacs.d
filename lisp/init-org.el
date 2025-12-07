@@ -240,7 +240,7 @@
 
 (use-package ox-pandoc
   :ensure t
-  :defer t
+  :after org
   :custom
   ;; 设置 pandoc 导出的默认目录
   (setq org-pandoc-export-directory "~/My_Note/org_Exports/")
@@ -256,21 +256,12 @@
 (setq org-pandoc-options-for-latex-pdf '((pdf-engine . "pdflatex")))
 ;; special extensions for markdown_github output
 (setq org-pandoc-format-extensions '(markdown_github+pipe_tables+raw_html))
-  ;; 自定义导出格式在菜单中的显示
-  (setq org-pandoc-menu-entry
-        '(
-          (?p "as Pandoc PDF" org-pandoc-export-to-pdf)
-          (?w "as Pandoc DOCX" org-pandoc-export-to-docx)
-          (?h "as Pandoc HTML" org-pandoc-export-to-html)
-          (?e "as Pandoc EPUB" org-pandoc-export-to-epub)
-          (?l "as Pandoc LaTeX" org-pandoc-export-to-latex)
-          (?m "as Pandoc Markdown" org-pandoc-export-to-markdown)
-          ))
-  ;; 或者直接添加到导出菜单选项
-  (define-key org-mode-map (kbd "C-c C-e p")
-         (lambda ()
-           (interactive)
-           (org-pandoc-export))))
+;; 可选：设置默认 pandoc 参数
+  (setq org-pandoc-options-for-html5 '(("--mathml")))
+  ;; 注册到 Org 导出系统（关键！）
+  (eval-after-load 'ox
+    '(require 'ox-pandoc)))
+
   
  
 
