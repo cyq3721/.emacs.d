@@ -25,10 +25,10 @@
 
 (use-package keycast
   :ensure t
+  :hook (after-init . keycast-mode)
+  :custom (keycast-mode-line-format '(" [" keycast--kbd " ⇢ " keycast--cmd " ]"))
   :config
   ((setq keycast-mode-line-remove-tail-elements nil)
-  ;; 启用 keycast
-  (keycast-mode-line-mode 1)
   ;; 或者使用 header-line 显示
   (keycast-table-bar-mode 1))
  

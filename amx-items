@@ -1,13 +1,13 @@
 
 ;; ----- amx-history -----
 (
+ keycast-header-line-mode
+ keycast-tab-bar-mode
  org-roam-db-sync
  my/batch-convert-titles
  org-roam-node-find
  web-mode
  cd
- 5x5
- amx
 )
 
 ;; ----- amx-data -----
@@ -16,4 +16,6 @@
  (org-roam-db-sync . 10)
  (org-roam-node-find . 1)
  (my/batch-convert-titles . 1)
+ (keycast-tab-bar-mode . 1)
+ (keycast-header-line-mode . 1)
 )
