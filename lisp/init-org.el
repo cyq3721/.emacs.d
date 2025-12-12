@@ -9,9 +9,9 @@
   :defer t
   :custom
   ;; 基本设置
-  (org-directory "~/My_Note/org")                    ; Org 文件目录
+  (org-directory "~/My_Note/note/")                    ; Org 文件目录
   (org-agenda-files '("~/My_Note/org"))              ; Agenda 文件
-  (org-default-notes-file "~/My_Note/org/notes.org") ; 默认笔记文件
+  (org-default-notes-file "~/My_Note/My_Notebook.org") ; 默认笔记文件
   
   ;; 显示设置
   (org-startup-indented t)                   ; 启用缩进

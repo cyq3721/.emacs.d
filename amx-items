@@ -1,21 +1,23 @@
 
 ;; ----- amx-history -----
 (
+ org-id-get-create
+ org-roam-db-sync
+ my/org-roam-batch-add-metadata
  keycast-header-line-mode
  keycast-tab-bar-mode
- org-roam-db-sync
  my/batch-convert-titles
  org-roam-node-find
- web-mode
- cd
 )
 
 ;; ----- amx-data -----
 (
  (web-mode . 1)
- (org-roam-db-sync . 10)
+ (org-roam-db-sync . 11)
  (org-roam-node-find . 1)
  (my/batch-convert-titles . 1)
  (keycast-tab-bar-mode . 1)
  (keycast-header-line-mode . 1)
+ (my/org-roam-batch-add-metadata . 2)
+ (org-id-get-create . 6)
 )

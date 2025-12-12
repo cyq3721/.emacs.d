@@ -29,6 +29,7 @@
 ;(require 'init-lsp)
 (require 'init-theme)
 (require 'init-org)
+(require 'init-roam)
 ;(require 'init-use-package)
 
 ;;; init.el ends here

@@ -1,0 +1,45 @@
+;;; ini-roam.el --- Summary -*-lexical-binding:t-*-
+;;; Commentary:
+;;; code:
+;; 使用 use-package（推荐）
+(use-package org-roam
+  :ensure t
+  :custom
+  (org-roam-directory "~/My_Note/note/")        ; 你的笔记主目录
+  (org-roam-db-location "~/My_Note/roam.db")   ; 数据库存放位置
+  (org-roam-capture-templates
+   '(("d" "default" plain "%?"
+      :target (file+head "notes/${slug}.org"
+                         "#+title: ${title}\n#+id: ${id}\n")
+      :unnarrowed t)))
+  :bind (("C-c n l" . org-roam-buffer-toggle)
+         ("C-c n f" . org-roam-node-find)
+         ("C-c n i" . org-roam-node-insert)
+         ("C-c n c" . org-roam-capture)
+         ("C-c n g" . org-roam-graph))
+  :config
+  ;; 可选：启用自动同步数据库
+  (org-roam-db-autosync-mode)
+  ;; 可选：美化显示（需要 embark + consult 等）
+  )
+
+;;处理老的org文件，用于导入
+(defun my/org-roam-batch-add-metadata (dir)
+  "为 DIR 下所有 .org 文件添加 #+title 和 #+id（如果缺失）。"
+  (interactive "DDirectory: ")
+  (dolist (file (directory-files-recursively dir "\\.org$"))
+    (with-current-buffer (find-file-noselect file)
+      (unless (org-get-todo-state) ; 避免处理空文件或非笔记
+        (goto-char (point-min))
+        ;; 添加 title（若无）
+        (unless (re-search-forward "^#\\+title:" nil t)
+          (goto-char (point-min))
+          (let ((title (file-name-sans-extension (file-name-nondirectory file))))
+            (insert "#+title: " title "\n")))
+        ;; 添加 id（若无）
+        (goto-char (point-min))
+        (unless (re-search-forward "^#\\+id:" nil t)
+          (goto-char (point-min))
+          (insert "#+id: " (org-id-new) "\n"))
+        (save-buffer)
+        (kill-buffer)))))
